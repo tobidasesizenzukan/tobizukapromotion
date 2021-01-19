@@ -154,12 +154,6 @@ p{
     }
 }
 
-.area-tool-description{
-    @include mq-down(md){
-        flex-direction: column-reverse;
-    }
-}
-
 .img-tool-logo{
     width: 25%;
 
