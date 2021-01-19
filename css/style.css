@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/*------------------------------------------------------------------------**
+** レスポンシブ設定                                                        **
+**------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------**
+** Font                                                                   **
+**------------------------------------------------------------------------*/
+.font-fot-seurat-pron {
+  font-family: fot-seurat-pron, sans-serif;
+}
+
+.font-fot-tsukuardgothic-std {
+  font-family: fot-tsukuardgothic-std, sans-serif;
+}
+
+/*------------------------------------------------------------------------**
+** Home                                                                   **
+**------------------------------------------------------------------------*/
+#home {
+  height: 100vh;
+  background: url("../img/background/bg_home.png");
+  background-size: contain, cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#home-log-tap {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  #home-log-tap {
+    text-align: center;
+  }
+  #home-log-tap img {
+    max-width: 80%;
+  }
+}
+
+/*------------------------------------------------------------------------**
+** Main                                                                   **
+**------------------------------------------------------------------------*/
+p {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  p {
+    font-size: 1.5em;
+  }
+}
+
+#main {
+  background: url("../img/background/bg_page.png");
+  padding-bottom: 10vh;
+}
+
+#main .card {
+  padding-top: 10vh;
+}
+
+@media screen and (max-width: 767px) {
+  .row-full {
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+  }
+}
+
+.card {
+  border: none;
+}
+
+.title {
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  padding: 10px 0;
+  text-shadow: 1px  1px 0px #cc6b00, -1px  1px 0px #cc6b00, 1px -1px 0px #cc6b00, -1px -1px 0px #cc6b00, 1px  0px 0px #cc6b00, 0px  1px 0px #cc6b00, -1px  0px 0px #cc6b00, 0px -1px 0px #cc6b00;
+  /* 文字縁取り */
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #ffffff;
+  background-color: #ff9e32;
+  border: 3px solid #ffae54;
+  background-size: contain;
+}
+
+@media screen and (max-width: 767px) {
+  .title {
+    font-size: 1.7em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 2em;
+  }
+}
+
+.img-graph {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .img-graph {
+    width: 100%;
+  }
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23cc6b00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23cc6b00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.img-tool-icon {
+  width: 50%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .img-tool-icon {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .area-tool-description {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.img-tool-logo {
+  width: 25%;
+}
+
+@media screen and (max-width: 767px) {
+  .img-tool-logo {
+    width: 40%;
+  }
+}
+
+.img-tool {
+  height: 40vh;
+}
+
+@media screen and (max-width: 767px) {
+  .tool-description {
+    text-align: center;
+  }
+}
+
+.link-youtube {
+  width: 100%;
+  height: 40vh;
+}
+
+/*------------------------------------------------------------------------**
+** Footer                                                                 **
+**------------------------------------------------------------------------*/
+.footer {
+  background-color: #ff9e32;
+}
+
+/*------------------------------------------------------------------------**
+** Animate Fade in                                                        **
+**------------------------------------------------------------------------*/
+.animate_fade-in {
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */

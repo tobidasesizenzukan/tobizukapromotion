@@ -1,0 +1,206 @@
+/*------------------------------------------------------------------------**
+** レスポンシブ設定                                                        **
+**------------------------------------------------------------------------*/
+
+// 変数の定義
+// min-width
+$breakpoint-up: (
+    'sm': 'screen and (min-width: 400px)',
+    'md': 'screen and (min-width: 768px)',
+    'lg': 'screen and (min-width: 1000px)',
+    'xl': 'screen and (min-width: 1200px)',
+) !default;
+
+// max-width
+$breakpoint-down: (
+    'sm': 'screen and (max-width: 399px)',
+    'md': 'screen and (max-width: 767px)',
+    'lg': 'screen and (max-width: 999px)',
+    'xl': 'screen and (max-width: 1199px)',
+) !default;
+
+// @mixinの定義
+@mixin mq-up($breakpoint: md) {
+    @media #{map-get($breakpoint-up, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin mq-down($breakpoint: md) {
+    @media #{map-get($breakpoint-down, $breakpoint)} {
+        @content;
+    }
+}
+
+/*------------------------------------------------------------------------**
+** Font                                                                   **
+**------------------------------------------------------------------------*/
+
+.font-fot-seurat-pron{
+    font-family: fot-seurat-pron, sans-serif;
+}
+
+.font-fot-tsukuardgothic-std{
+    font-family: fot-tsukuardgothic-std, sans-serif;
+}
+
+/*------------------------------------------------------------------------**
+** Home                                                                   **
+**------------------------------------------------------------------------*/
+
+#home{
+    height: 100vh;
+    background: url("../img/background/bg_home.png");
+    background-size: contain, cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#home-log-tap{
+    max-width: 100%;
+
+    @include mq-down(md){
+
+        text-align: center;
+        img{
+            max-width: 80%;
+        }
+    }
+}
+/*------------------------------------------------------------------------**
+** Main                                                                   **
+**------------------------------------------------------------------------*/
+p{
+    margin-bottom: 0;
+    @include mq-up(xl){
+        font-size: 1.5em;
+    }
+}
+
+#main{
+    background: url("../img/background/bg_page.png");
+    padding-bottom: 10vh;
+
+    .card{
+        padding-top: 10vh;
+    }
+}
+
+.row-full{
+    @include mq-down(md){
+        width: 100vw;
+        position: relative;
+        margin-left: -50vw;
+        left: 50%;
+    }
+}
+
+.card{
+    border: none;
+}
+
+.title{
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-shadow :
+        1px  1px 0px #cc6b00,
+        -1px  1px 0px #cc6b00,
+        1px -1px 0px #cc6b00,
+        -1px -1px 0px #cc6b00,
+        1px  0px 0px #cc6b00,
+        0px  1px 0px #cc6b00,
+        -1px  0px 0px #cc6b00,
+        0px -1px 0px #cc6b00;/* 文字縁取り */
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #ffffff;
+    background-color: #ff9e32;
+    border:3px solid #ffae54;
+    background-size: contain;
+
+    @include mq-down(md){
+        font-size: 1.7em;
+    }
+    @include mq-up(xl){
+        font-size: 2em;
+    }
+}
+
+.img-graph{
+    width: 80%;
+    margin: 0 auto;
+    @include mq-down(md){
+        width: 100%;
+    }
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23cc6b00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23cc6b00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.img-tool-icon{
+    width: 50%;
+    cursor: pointer;
+
+    @include mq-down(md){
+        width: 80%;
+    }
+}
+
+.area-tool-description{
+    @include mq-down(md){
+        flex-direction: column-reverse;
+    }
+}
+
+.img-tool-logo{
+    width: 25%;
+
+    @include mq-down(md){
+        width: 40%;
+    }
+}
+
+.img-tool{
+    height: 40vh;
+}
+
+.tool-description{
+    @include mq-down(md){
+        text-align: center;
+    }
+}
+
+.link-youtube{
+    width: 100%;
+    height: 40vh;
+}
+
+/*------------------------------------------------------------------------**
+** Footer                                                                 **
+**------------------------------------------------------------------------*/
+.footer{
+    background-color: #ff9e32;
+}
+
+/*------------------------------------------------------------------------**
+** Animate Fade in                                                        **
+**------------------------------------------------------------------------*/
+.animate_fade-in{
+    opacity: 0;
+  }
+  @keyframes fadeIn{
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+  }
